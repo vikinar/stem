@@ -1,0 +1,44 @@
+// Abstracts
+
+@import './sass/abstracts/functions';
+@import './sass/abstracts/mixins';
+@import './sass/abstracts/variables';
+
+// Base
+
+@import './sass/base/animations';
+@import './sass/base/base';
+@import './sass/base/typography';
+@import './sass/base/utilities';
+
+// Layout
+
+@import './sass/layout/grid';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  /* adds animation for all transitions */
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  src: local('Montserrat'), local('Pacifico-Regular'), url(https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700) format('woff2');
+  font-display: swap;
+}
+
+
+html,body {
+  height: 100%;
+  overflow: hidden;
+}

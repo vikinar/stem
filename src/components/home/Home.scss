@@ -1,0 +1,215 @@
+@import '../../sass/abstracts/variables';
+
+.home {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+.mainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .poster{
+        height: 80vh;
+        overflow: hidden;
+        background: url("../../assets/img/poster.webp");
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+        &__title{
+            font-size: 4vw;
+            color: white;
+            font-weight: 400;
+            text-shadow: 2px 4px 10px rgba(0,0,0,.75);
+        }
+        &__action{
+            width: 15rem;
+            height: 3rem;
+            margin: 1rem 0;
+            background: $mainColor;
+            font-weight: 600;
+            outline: none;
+            color: white;
+            border: none;
+            cursor: pointer;
+            &:hover{
+                background: $secColor;
+            }
+        }
+    }
+}
+
+    .main{
+        flex: 1;
+       // position: relative;
+    }
+
+    .header {
+
+        background: #eee;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        #Layer_2{
+            width: 6rem;
+            margin: 1rem 2rem;
+        }
+        &__title {
+            color: $mainColor;
+            margin: 2rem 0;
+        }
+
+        .nav-icon{
+            display: none;
+        }
+    }
+
+    .footer {
+        background: #eee;
+        height: 8rem;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .copy{
+            margin: 0 2rem;
+            //color: $mainColor;
+        }
+
+        .g-b{
+            display: flex;
+            align-items: center;
+            margin: 0 2rem;
+            &__title{
+                //color: $mainColor;
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+            &__img{
+                width: 15rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+        .header {
+            position: relative;
+            height: 10%;
+            background: #eee;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 3rem 0;
+            #Layer_2{
+                width: 4rem;
+                margin: 1rem 1rem;
+            }
+            &__title {
+                font-size: 1.2rem;
+                //color: $mainColor;
+                margin: 2rem 0;
+            }
+
+            .login-form{
+                margin: 1rem;
+            }
+
+            .nav-icon{
+                display: block;
+                margin: -.5rem 0 .5rem .75rem;
+                width: 4rem;
+                height: 3px;
+                background: $mainColor;
+                position: relative;
+                border-radius: 100px;
+                cursor: pointer;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 60%;
+                    height: 3px;
+                    background: $mainColor;
+                    margin: .75rem 0;
+                    border-radius: 100px;
+                }
+            }
+        }
+.mainer {
+    .poster {
+        height: 80vh;
+        overflow: hidden;
+        background: url("../../assets/img/poster.webp");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        opacity: .9;
+
+        &__title {
+            font-size: 15vw;
+            color: white;
+            font-weight: 400;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, .75);
+        }
+
+        &__action {
+            width: 15rem;
+            height: 3rem;
+            margin: 1rem 0;
+            background: $mainColor;
+            font-weight: 600;
+            outline: none;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background: $secColor;
+            }
+        }
+    }
+}
+        .nav{
+            display: none;
+        }
+
+        .footer {
+            max-width: 100%;
+            &__wrap{
+                position: relative;
+                display: flex;
+            }
+            .copy {
+                font-size: .75rem;
+                // color: $mainColor;
+            }
+
+            .g-b {
+                display: flex;
+                align-items: center;
+                margin: 0 1rem;
+
+                &__title {
+                    // color: $mainColor;
+                    font-size: 1rem;
+                    margin: 0 1rem;
+                }
+
+                &__img {
+                    width: 7.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+.cls-1{fill:#231f20;}.cls-1,.cls-10,.cls-11,.cls-2,.cls-3,.cls-8,.cls-9{fill-rule:evenodd;}.cls-2{fill:#00579b;}.cls-3,.cls-4{fill:#fff;}.cls-5{fill:#ed1c24;}.cls-6{fill:#2a3c98;}.cls-7{fill:#f58220;}.cls-8,.cls-9{fill:#f8e7c9;}.cls-11,.cls-9{stroke:#fff;stroke-miterlimit:2.61;}.cls-9{stroke-width:0.84px;}.cls-10{fill:#363c53;}.cls-11{fill:#bd8e47;stroke-width:0.84px;}.cls-12{fill:#1226aa;}
