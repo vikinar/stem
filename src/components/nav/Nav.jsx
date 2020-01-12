@@ -44,6 +44,27 @@ export default class Nav extends Component {
         },
     ];
 
+    componentDidMount(){
+        if(localStorage.getItem("avatar") !== null){
+            fetch('https://www.avc-agbu.org/edu/login/index.php', {
+                  //	mode: 'no-cors',
+                          method: 'POST',
+                          headers: {
+                              'Content-Type': 'application/x-www-form-urlencoded',
+                              'Accept': 'application/json'
+                          },
+                          body: `username=${this.state.text}&password=${this.state.password}`
+                      }).then(() => {
+                          console.log('Logged in to moodle');
+                      }).catch((err) => {
+                          console.log('Failed to SSO login to moodle');
+                          console.log(err);
+                      }).finally(() => {
+                          return true;
+                      })
+        }
+    }
+
     render() {
         return (
             <nav className= {'nav'}>

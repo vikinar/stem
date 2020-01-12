@@ -33,6 +33,8 @@ export default class Home extends Component{
         fetch(url).then(client => client.json())
             .then(response => {
                 this.setState({ token: response.token });
+            
+                      
                 fetch(`https://www.avc-agbu.org/edu/webservice/rest/server.php?moodlewsrestformat=json&wstoken=${this.state.token}&wsfunction=core_webservice_get_site_info`)
                     .then(user => user.json())
                     .then(async id => {
@@ -48,12 +50,6 @@ export default class Home extends Component{
                         localStorage.setItem('fullname', JSON.stringify(this.state.fullName));
                         localStorage.setItem('avatar', JSON.stringify(this.state.avatar));
                         console.log(this.state.token);
-
-                        fetch(`https://www.avc-agbu.org/edu/webservice/rest/server.php?moodlewsrestformat=json&wstoken=${this.state.token}&wsfunction=core_enrol_get_users_courses&userid=${this.state.userId}`)
-                            .then(course => course.json())
-                            .then(courseList => this.setState({
-                                data: courseList
-                            }))
                     })
             })
     };
