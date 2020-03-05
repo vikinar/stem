@@ -1,0 +1,389 @@
+@import '../../../sass/abstracts/variables';
+
+.cont {
+    width: 100%;
+    height: 10%;
+
+    .mainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .loginBtn {
+            position: relative;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 1px solid $mainColor;
+            }
+        }
+    }
+
+    .main {
+        flex: 1;
+        // position: relative;
+    }
+
+    .header {
+        background: #eee;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        #Layer_2 {
+            width: 3rem;
+            margin: 1rem 2rem;
+        }
+
+        &__title {
+            color: $mainColor;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+        .wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @keyframes fade {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            } 100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        .popup-content{
+            width: 20vw !important;
+            animation: fade backwards cubic-bezier(.26, .1, .27, 1.75) .45s;
+            border: none;
+            box-shadow: 1px 4px 15px rgba(0,0,0,.5);
+        }
+
+        .modal {
+            font-size: 12px;
+            transition: all .25s ease;
+          }
+          .modal > .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: transparent;
+            border-bottom: 1px solid #eee;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 1rem;
+            color: $mainColor
+          }
+          .modal > .content {
+            width: 100%;
+            padding: 10px 5px;
+          }
+          .modal > .actions {
+            width: 100%;
+            padding: 10px 5px;
+            margin: auto;
+            text-align: center;
+          }
+          .close {
+            cursor: pointer;
+            padding: 2px 5px;
+            line-height: 20px;
+            font-size: 2rem;
+            background: #ffffff;
+            border-radius: 18px;
+            color: $mainColor;
+            &:hover{
+                color: $secColor
+            }
+          }
+
+
+          .login-form {
+            width: 100%;
+            &__inp{
+                width: 100%;
+                font-size: 1rem;
+                padding: .75rem;
+                margin: .25rem 0;
+                outline: none;
+                border: 1px solid rgba($mainColor, .1);
+                color: $mainColor;
+            }
+            .button{
+                width: 100%;
+                font-size: 1rem;
+                border: none;
+                padding: 0.75rem;
+                background: $mainColor;
+                color: white;
+                cursor: pointer;
+                outline: none;
+                &:hover{
+                    background: $secColor;
+                }
+            }
+        }
+
+        .nav-icon {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1366px) {
+    .cont {
+        height: 10%;
+        .header{
+        .popup-content{
+            width: 30% !important;
+        }
+    }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .cont {
+        height: 10%;
+        .header{
+        .popup-content{
+            width: 50% !important;
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 823px) {
+    .cont {
+        height: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cont {
+        height: 15%;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .cont {
+        height: 20%;
+        .header {
+            
+            position: relative;
+            background: #eee;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            #Layer_2 {
+                width: 4rem;
+                margin: 1rem 1rem;
+            }
+
+
+            &__title {
+                font-size: 1.2rem;
+                //color: $mainColor;
+                margin: 2rem 0;
+            }
+
+            .wrap {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 1rem;
+            }
+
+            .popup-content{
+                width: 90% !important;
+            }
+
+            .nav-icon {
+                position: relative;
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                margin: .5rem .5rem .5rem 1rem;
+                z-index: 3;
+                cursor: pointer;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 50px;
+                    background: $secColor;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 0;
+                    width: 60%;
+                    height: 3px;
+                    border-radius: 50px;
+                    background: $secColor;
+                }
+            }
+        }
+    }
+}
+
+    @media only screen and (max-width: 600px) {
+        .cont {
+            height: 15%;
+            .header {
+                position: relative;
+               // height: 10%;
+                background: #eee;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0;
+
+                #Layer_2 {
+                    width: 4rem;
+                    margin: 1rem 1rem;
+                }
+
+
+                &__title {
+                    font-size: 1.2rem;
+                    //color: $mainColor;
+                    margin: 2rem 0;
+                }
+
+                .wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right: 1rem;
+                }
+
+                .popup-content{
+                    width: 90% !important;
+                }
+
+                .nav-icon {
+                    position: relative;
+                    display: block;
+                    width: 2rem;
+                    height: 2rem;
+                    margin: .5rem .5rem .5rem 1rem;
+                    z-index: 3;
+                    cursor: pointer;
+
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        border-radius: 50px;
+                        background: $secColor;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 50%;
+                        left: 0;
+                        width: 60%;
+                        height: 3px;
+                        border-radius: 50px;
+                        background: $secColor;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+.cls-1 {
+    fill: #231f20;
+}
+
+.cls-1,
+.cls-10,
+.cls-11,
+.cls-2,
+.cls-3,
+.cls-8,
+.cls-9 {
+    fill-rule: evenodd;
+}
+
+.cls-2 {
+    fill: #00579b;
+}
+
+.cls-3,
+.cls-4 {
+    fill: #fff;
+}
+
+.cls-5 {
+    fill: #ed1c24;
+}
+
+.cls-6 {
+    fill: #2a3c98;
+}
+
+.cls-7 {
+    fill: #f58220;
+}
+
+.cls-8,
+.cls-9 {
+    fill: #f8e7c9;
+}
+
+.cls-11,
+.cls-9 {
+    stroke: #fff;
+    stroke-miterlimit: 2.61;
+}
+
+.cls-9 {
+    stroke-width: 0.84px;
+}
+
+.cls-10 {
+    fill: #363c53;
+}
+
+.cls-11 {
+    fill: #bd8e47;
+    stroke-width: 0.84px;
+}
+
+.cls-12 {
+    fill: #1226aa;
+}

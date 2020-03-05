@@ -1,0 +1,105 @@
+@import '../../sass/abstracts/variables';
+
+main{
+    height: 80%;
+    overflow: auto;
+    @media only screen and (max-width: 667px) {
+        height: 75%;
+    }
+}
+
+.category {
+    width: 100%;
+    height: 100%;
+    &__header{
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        background-color: #ddf;
+        position: sticky;
+        top: 0;
+        animation: fading .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+        z-index: 1;
+    }
+
+    @keyframes fading {
+        0% {
+            opacity: 0;
+        } 100% {
+            opacity: 1;
+        }
+    }
+
+    &__content{
+        margin: 1rem 2rem;
+        animation: fading .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+        .container{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            animation: fading .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+            .no-content {
+                position: relative;
+                margin-top: 3rem;
+                font-size: 2rem;
+                font-weight: 800;
+                justify-self: center;
+                align-self: center;
+                color: #ccc;
+                text-align: center;
+            }
+            .item{
+                padding: 0;
+                width: calc((100% / 3) - 60px);
+                border-radius: .5rem .5rem  0 0;
+                margin: 1rem .5rem;
+                box-shadow: 1px 2px 8px rgba($mainColor, .2);
+                cursor: pointer;
+                z-index: 0;
+                animation: loading .5s backwards cubic-bezier(.26, .1, .27, 1.85) .45s;
+                &:hover{
+                    box-shadow: 0 8px 12px rgba($mainColor, .5);
+                    transform: translateY(-.5rem);
+                }
+
+                @keyframes loading {
+                    0%{
+                        opacity: 0;
+                        transform: translateY(25%);
+                    }
+                    100%{
+                        opacity: 1;
+                        transform: translateY(0%) scale(1);
+                    }
+                }
+
+                @media only screen and (max-width: 823px) {
+                    width: 45%;
+                }
+
+                @media only screen and (max-width: 600px) {
+                        width: 100%;
+                }
+                
+                &__img{
+                    width: 100%;
+                    img{
+                        border-radius: .5rem .5rem 0 0;
+                        width: 100%;
+                    }
+                }
+
+                &__content{
+                    margin: .5rem 1.5rem;
+                    h2{
+                        margin: .5rem 0;
+                        color: $secColor
+                    }
+                    p{
+                        margin: 0.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
