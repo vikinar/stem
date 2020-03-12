@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import './Nav.scss'
 import { ReactComponent as Profile} from './profile.svg'
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import {Category} from '../category/Category'
+import { Link } from 'react-router-dom'
 
 export default class Nav extends Component {
     constructor(props) {

@@ -1,0 +1,34 @@
+@import '../abstracts/variables';
+@import '../base/animations';
+
+.container {
+    &__transfer {
+        &__poster {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 30rem;
+            background: $secColor;
+
+            &--title {
+                margin: 1.5rem;
+                color: white;
+                text-shadow: 1px 4px 8px rgba(0, 0, 0, .5)
+            }
+        }
+    }
+    &__submitBtn {
+        background-color: $mainColor;
+        height: 3rem;
+        color: white;
+        border: none;
+        width: 100%;
+        margin: .5rem 0;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover{
+            background-color: $secColor;
+        }
+    }
+}
+

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import Nav from '../nav/Nav'
-import './Home.scss'
-import glogo from '../../assets/img/google-play.webp'
+import Nav from '../layout/Nav/Nav'
+import '../../sass/pages/home.scss'
+import glogo from 'assets/img/google-play.webp'
 import Popup from 'reactjs-popup'
 
 export default class Home extends Component{

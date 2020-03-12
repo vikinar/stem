@@ -1,4 +1,5 @@
 @import '../../../sass/abstracts/variables';
+@import '../../../sass/base/animations';
 
 .cont {
     width: 100%;
@@ -54,17 +55,6 @@
             display: flex;
             justify-content: space-between;
         }
-
-        @keyframes fade {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            } 100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
 
         .popup-content{
             width: 20vw !important;

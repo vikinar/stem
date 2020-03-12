@@ -6,11 +6,14 @@ import { Route, Switch, BrowserRouter as Router, HashRouter } from 'react-router
 
 //Pages
 
-import Home from './components/home/Home'
-import Nav from './components/nav/Nav'
+import Home from './components/pages/Home'
+import Nav from './components/layout/Nav/Nav'
 import Category from './components/category/Category'
 import Transfer from './components/pages/Transfer'
 
+// Lab Pages
+
+import Algebra from './components/pages/Algebra'
 
 //Layout
 
@@ -39,6 +42,7 @@ class App extends React.Component {
     const userAgent = window.navigator.userAgent.toLowerCase();
     return /iphone|ipad|ipod/.test(userAgent);
   }
+
   // Detects if device is in standalone mode
   isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
@@ -117,9 +121,12 @@ class App extends React.Component {
               <Route path='/:category/' exact>
                 <Category bg = {this.state.contentBg} itemBg = {this.state.itemBg} itemTitle = {this.state.itemTitle} color = {this.state.itemColor}/>
               </Route>
-              <Route path='/:category/:transfer/'>
+              <Route path='/:category/:transfer/' exact>
                   <Transfer bg = {this.state.contentBg} itemBg = {this.state.itemBg} itemTitle = {this.state.itemTitle} color = {this.state.itemColor}/>
-                </Route>
+              </Route>
+              <Route path='/:category/:transfer/algebraLab'>
+                <Algebra bg = {this.state.contentBg} itemBg = {this.state.itemBg} itemTitle = {this.state.itemTitle} color = {this.state.itemColor}/>
+              </Route>
             </Switch>
             {/* Footer , static component   */}
             <Footer bg={this.state.bg} color={this.state.color} />

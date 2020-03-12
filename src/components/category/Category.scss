@@ -21,14 +21,6 @@ main{
         z-index: 1;
     }
 
-    @keyframes fading {
-        0% {
-            opacity: 0;
-        } 100% {
-            opacity: 1;
-        }
-    }
-
     &__content{
         margin: 1rem 2rem;
         animation: fading .5s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -60,17 +52,6 @@ main{
                 &:hover{
                     box-shadow: 0 8px 12px rgba($mainColor, .5);
                     transform: translateY(-.5rem);
-                }
-
-                @keyframes loading {
-                    0%{
-                        opacity: 0;
-                        transform: translateY(25%);
-                    }
-                    100%{
-                        opacity: 1;
-                        transform: translateY(0%) scale(1);
-                    }
                 }
 
                 @media only screen and (max-width: 823px) {
