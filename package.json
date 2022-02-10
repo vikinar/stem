@@ -5,7 +5,7 @@
   "homepage": "https://www.avc-agbu.org/edu/avc_language/STEM",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
